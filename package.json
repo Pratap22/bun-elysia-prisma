@@ -3,13 +3,20 @@
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "seed": "bunx prisma db seed"
+  },
+  "prisma": {
+    "seed": "node scripts/seed.js"
   },
   "dependencies": {
+    "@elysiajs/swagger": "^0.8.5",
+    "@prisma/client": "5.8.1",
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "prisma": "^5.8.1"
   },
   "module": "src/index.js"
 }
